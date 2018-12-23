@@ -27,7 +27,7 @@ class WalletPageState extends State<WalletPage> with TickerProviderStateMixin{
 
   String more = "";
 
-  bool isLoadingMore = false;
+  bool isLoadingMore = true;
 
 //  final items = new List<String>.generate(100, (i) => "Item $i");
 
@@ -240,7 +240,9 @@ class WalletPageState extends State<WalletPage> with TickerProviderStateMixin{
 //        setState(() {
 //          more = "";
 //        });
-      loadMore(m);
+//      loadMore(m);
+
+      new Future.delayed(Duration(seconds: 2),()=>loadMore(m));
       }
     }
     return true;
@@ -251,7 +253,7 @@ class WalletPageState extends State<WalletPage> with TickerProviderStateMixin{
     setState(() {
       count += 10;
     });
-    Fluttertoast.showToast(msg: "加载更多");
+//    Fluttertoast.showToast(msg: "加载更多");
 
   }
 
