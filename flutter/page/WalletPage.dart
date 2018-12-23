@@ -52,8 +52,8 @@ class WalletPageState extends State<WalletPage> with TickerProviderStateMixin{
                       onPressed: () {
                         Fluttertoast.showToast(
                             msg: "住口！我说谁最大谁就最大",
-                            bgcolor: "#000000",
-                            textcolor: "#ffffff",
+                            textColor: Colors.white,
+                            backgroundColor: Colors.black,
                             toastLength: Toast.LENGTH_LONG);
                         Navigator.of(context).pop();
                       },
@@ -153,7 +153,7 @@ class WalletPageState extends State<WalletPage> with TickerProviderStateMixin{
                     highlightColor: Colors.black,
                     onTap: () {
                       Fluttertoast.showToast(
-                          msg: "点点点", textcolor: "#ffffff", bgcolor: "#000000");
+                          msg: "点点点", textColor:Colors.white,backgroundColor: Colors.black);
                     },
                   ),
                   Text("收款", style: ts)
